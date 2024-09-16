@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+  
+    <title>Espace Employé - Validation des Avis</title>
+    <link rel="stylesheet" href="../CSS/employee.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="employee.html" class="active">Validation des Avis</a></li>
+                <li><a href="services.html">Modifier les Services</a></li>
+            </ul>
+        </nav>
+        <h1>Espace Employé</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Validation des Avis</h2>
+            <table id="reviews-table">
+                <thead>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Avis</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Modifier les Services</h2>
+            <form id="service-form">
+                <label for="service-name">Nom du Service:</label>
+                <input type="text" id="service-name" name="service-name" required><br><br>
+                <label for="service-description">Description:</label>
+                <textarea id="service-description" name="service-description" required></textarea><br><br>
+                <input type="submit" value="Modifier le Service">
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="../JS/employee.js"></script> <!-- Link to your JS file -->
+</body>
+</html>

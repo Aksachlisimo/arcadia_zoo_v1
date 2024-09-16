@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <title>Nos Services - Arcadia Zoo</title>
+  <link rel="stylesheet" href="../CSS/services.css"> <!-- Link to your existing CSS file -->
+</head>
+<body>
+  
+  <header>
+    <h1 id="head">Nos Services</h1>
+
+    <nav id="nav">
+      <!-- Navigation links -->
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Nos Services</a></li>
+        <li><a href="habitats.html">Nos Habitats</a></li>
+        <li><a href="animals.html">Nos Animaux</a></li>
+        <li><a href="reviews.html">Avis des visiteurs</a></li>
+        <li><a href="login.html">Connexion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Liste des services</h2>
+      <ul id="services-list">
+        <li>
+          <h3>Restauration</h3>
+          <p>Notre restaurant propose une variété de plats délicieux dans un cadre agréable et écologique.</p>
+        </li>
+        <li>
+          <h3>Visite des habitats avec un guide (gratuit)</h3>
+          <p>Profitez d'une visite guidée gratuite de nos habitats animaliers avec un guide expérimenté.</p>
+        </li>
+        <li>
+          <h3>Visite du zoo en petit train</h3>
+          <p>Découvrez le zoo à bord de notre petit train, offrant une vue panoramique des principales attractions.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Modification des services</h2>
+      <form id="service-modification-form">
+        <label for="service-id">ID du service:</label>
+        <input type="text" id="service-id" name="service-id" required><br><br>
+        <label for="service-name">Nom du service:</label>
+        <input type="text" id="service-name" name="service-name" required><br><br>
+        <label for="service-description">Description:</label>
+        <textarea id="service-description" name="service-description" required></textarea><br><br>
+        <input type="submit" value="Modifier le service">
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+  </footer>
+  <script src="../JS/services.js"></script>
+</body>
+</html>

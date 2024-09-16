@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <title>Avis des Visiteurs - Arcadia Zoo</title>
+  <link rel="stylesheet" href="../CSS/reviews.css"> <!-- Link to your existing CSS file -->
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Nos Services</a></li>
+        <li><a href="habitats.html">Nos Habitats</a></li>
+        <li><a href="animals.html">Nos Animaux</a></li>
+        <li><a href="reviews.html" class="active">Avis des visiteurs</a></li>
+        <li><a href="login.html">Connexion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Avis des Visiteurs</h1>
+  </header>
+  
+  <!-- Main content section -->
+  <main>
+    <!-- Soumission d'un avis -->
+    <section>
+      <h2>Soumettre un Avis</h2>
+      <form id="review-form">
+        <label for="pseudo">Pseudo:</label>
+        <input type="text" id="pseudo" name="pseudo" required>
+        <label for="review">Avis:</label>
+        <textarea id="review" name="review" required></textarea>
+        <div class="button-container">
+        <button class="but" type="submit">Soumettre</button>
+      </div>
+      </form>
+    </section>
+    
+    <!-- Validation des avis -->
+    <section>
+      <h2>Validation des Avis</h2>
+      <p id="rev">Les avis soumis seront examinés et validés par les employés. Seuls les avis approuvés seront affichés sur la page d'accueil.</p>
+    </section>
+  </main>
+  
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+  </footer>
+  <script src="../JS/reviews.js"></script>
+</body>
+</html>

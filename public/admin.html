@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace Administrateur</title>
+  <link rel="stylesheet" href="../CSS/admin.css"> <!-- Link to your existing CSS file -->
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="admin.html">Gestion des services</a></li>
+        <li><a href="veterinarian.html">Comptes rendus du vétérinaire</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <h1>Espace Administrateur</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Création de compte</h2>
+      <form id="account-creation-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="role">Rôle:</label>
+        <select id="role" name="role" required>
+          <option value="employee">Employé</option>
+          <option value="veterinarian">Vétérinaire</option>
+        </select><br><br>
+        <input type="submit" value="Créer compte">
+      </form>
+    </section>
+    
+    <section>
+      <h2>Gestion des services</h2>
+      <ul id="service-list">
+        <!-- Service management items here -->
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Comptes rendus du vétérinaire</h2>
+      <table id="vet-report-table">
+        <thead>
+          <tr>
+            <th>Animal</th>
+            <th>Date du rapport</th>
+            <th>Rapport</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table data populated dynamically -->
+        </tbody>
+      </table>
+      <select id="vet-report-filter">
+        <option value="">Tous les rapports</option>
+        <option value="dog">Chiens</option>
+        <option value="cat">Chats</option>
+        <!-- Additional filter options -->
+      </select>
+    </section>
+    
+    <section>
+      <h2>Dashboard</h2>
+      <canvas id="dashboard-canvas" width="400" height="200"></canvas>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

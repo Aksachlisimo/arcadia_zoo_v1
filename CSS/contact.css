@@ -1,0 +1,129 @@
+/* General Styles */
+html, body {
+  height: 100%; /* Ensure html and body take up full height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6; /* Light, eco-friendly background color */
+  color: #333; /* Dark grey for text */
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: rgb(58, 146, 105); /* Earthy green for header */
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #4caf50; /* Eco green for nav bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style: none;
+  margin: 0; /* Remove default margin */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+/* Main Section Styling */
+main {
+  flex: 1; /* Ensure main takes up the remaining space */
+  padding: 0 1rem; /* Add horizontal padding */
+}
+
+/* Section Styling */
+section {
+  margin: 2rem auto; /* Center section and add vertical margin */
+  max-width: 600px; /* Limit section width */
+}
+
+/* Header Title */
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2e7d32; /* Dark green */
+}
+
+/* Contact Form */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center form */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  background-color: #4caf50; /* Green button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block; /* Center button */
+  margin: 0 auto; /* Center button horizontally */
+}
+
+button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%; /* Full width */
+  bottom: 0;
+  position: absolute; /* Positioned at the bottom */
+}

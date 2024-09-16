@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace Vétérinaire - Arcadia Zoo</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../CSS/veterinarian.css"> <!-- Link to your existing CSS file -->
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Nos Services</a></li>
+        <li><a href="habitats.html">Nos Habitats</a></li>
+        <li><a href="animals.html">Nos Animaux</a></li>
+        <li><a href="reviews.html">Avis des visiteurs</a></li>
+        <li><a href="login.html">Connexion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Espace Vétérinaire</h1>
+  </header>
+  
+  <!-- Main content section -->
+  <main>
+    <!-- Reports Section -->
+    <section id="reports">
+      <h2>Comptes Rendus</h2>
+      <form id="report-form">
+        <label for="animal-id">ID de l'animal:</label>
+        <input type="text" id="animal-id" name="animal-id" required><br><br>
+        <label for="report-date">Date:</label>
+        <input type="date" id="report-date" name="report-date" required><br><br>
+        <label for="report-text">Rapport:</label>
+        <textarea id="report-text" name="report-text" required></textarea><br><br>
+        <input type="submit" value="Soumettre le rapport">
+      </form>
+    </section>
+    
+    <!-- Habitat Comments Section -->
+    <section id="habitat-comments">
+      <h2>Commentaires sur les Habitats</h2>
+      <form id="comment-form">
+        <label for="habitat-id">ID de l'habitat:</label>
+        <input type="text" id="habitat-id" name="habitat-id" required><br><br>
+        <label for="comment-text">Commentaire:</label>
+        <textarea id="comment-text" name="comment-text" required></textarea><br><br>
+        <input type="submit" value="Soumettre le commentaire">
+      </form>
+    </section>
+    
+    <!-- Feeding Records Section -->
+    <section id="feeding-records">
+      <h2>Enregistrements de Nourriture</h2>
+      <form id="feeding-form">
+        <label for="animal-id-feeding">ID de l'animal:</label>
+        <input type="text" id="animal-id-feeding" name="animal-id-feeding" required><br><br>
+        <label for="feeding-date">Date:</label>
+        <input type="date" id="feeding-date" name="feeding-date" required><br><br>
+        <label for="feeding-time">Heure:</label>
+        <input type="time" id="feeding-time" name="feeding-time" required><br><br>
+        <label for="food-type">Type de nourriture:</label>
+        <input type="text" id="food-type" name="food-type" required><br><br>
+        <label for="food-quantity">Quantité:</label>
+        <input type="number" id="food-quantity" name="food-quantity" required><br><br>
+        <input type="submit" value="Soumettre l'enregistrement">
+      </form>
+    </section>
+  </main>
+  
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+  </footer>
+
+  <script src="../JS/veterinarian.js"></script>
+</body>
+</html>

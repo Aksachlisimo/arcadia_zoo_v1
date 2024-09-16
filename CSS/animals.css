@@ -1,0 +1,121 @@
+/* animals.css */
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e2f0e6; /* Matching light green background */
+  color: #333; /* Dark grey for text */
+  line-height: 1.6;
+  margin: 0; /* Ensure no default margin */
+}
+
+/* Header Styles */
+header {
+  background-color: rgb(58, 146, 105); /* Earthy green for header */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0; /* Consistent padding */
+}
+
+header h1 {
+  font-size: 36px; /* Consistent font size */
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #4caf50; /* Eco green for nav bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style: none;
+  margin: 0; /* Remove default margin */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+/* Main Section Styling */
+main {
+  padding: 20px; /* Consistent padding */
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 2rem; /* Consistent bottom margin */
+}
+
+h2 {
+  font-size: 28px; /* Consistent font size */
+  margin: 0 0 20px 0; /* Adjusted margin */
+  text-align: center;
+  color: #2b6e34; /* Matching dark green */
+}
+
+/* Animals List */
+#animals-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto; /* Center the container */
+  max-width: 1200px; /* Limit the width of the container */
+}
+
+.animal-item {
+  flex: 1 1 calc(33% - 20px); Adjust for gap between cards
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f4f1;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px; /* Set a maximum width for cards */
+}
+
+.animal-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.animal-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.animal-item h3 {
+  color: #388e3c;
+  font-size: 22px;
+}
+
+.animal-item p {
+  font-size: 14px;
+  color: #616161;
+}
+
+/* Footer */
+footer {
+  background-color: #2b6e34; /* Dark green for footer */
+  color: white;
+  padding: 15px; /* Increased padding for consistency */
+  text-align: center;
+  margin-top: 20px; /* Ensure spacing from main content */
+}

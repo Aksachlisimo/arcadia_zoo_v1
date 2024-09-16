@@ -1,0 +1,164 @@
+/* Reset some default styles */
+body, h2, h3, p, ul, li, form, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 20px;
+}
+
+/* Apply Google Font to the entire page */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+header {
+  color: #fff;
+  background-color: rgb(58, 146, 105); /* Dark green for ecological theme */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation Menu Styles */
+nav {
+  background-color: #4caf50; /* Eco green for nav bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav li {
+    margin: 10px 0;
+  }
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background-color: #e2f0e6; /* Light green background */
+}
+
+/* Section Headers */
+h2 {
+  color: #2b6e34; /* Matching dark green */
+  border-bottom: 2px solid #4caf50; /* Underline for headers */
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Habitat Section */
+.habitat-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto; /* Center the container */
+  max-width: 1200px; /* Limit the width of the container */
+}
+
+.habitat-card {
+  flex: 1 1 calc(33% - 20px); Adjust for gap between cards
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f4f1;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px; /* Set a maximum width for cards */
+}
+
+.habitat-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.habitat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.habitat-card h3 {
+  color: #388e3c;
+  font-size: 22px;
+}
+
+.habitat-card p {
+  color: #616161;
+  font-size: 14px;
+}
+
+.details-btn {
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.details-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Details Section */
+.details-section {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .habitat-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .habitat-card {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed screen width */
+  }
+}
+
+footer {
+  background-color: #2b6e34;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

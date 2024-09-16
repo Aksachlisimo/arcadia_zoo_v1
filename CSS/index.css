@@ -1,0 +1,196 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6; /* Light, eco-friendly background color */
+  color: #333; /* Dark grey for text */
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: rgb(58, 146, 105); /* Earthy green for header */
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #4caf50; /* Eco green for nav bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style: none;
+}
+
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-image {
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-image h1 {
+  font-size: 48px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero-image p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Section Styling */
+.section-container {
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2e7d32; /* Dark green */
+}
+
+/* Images in Sections */
+.images-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.images-container img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding depth */
+}
+
+/* Service List */
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-list li {
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-list img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-list h3 {
+  margin-top: 15px;
+  font-size: 24px;
+  color: #388e3c; /* Dark green */
+}
+
+/* Habitat List */
+.habitat-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.habitat-list li {
+  width: 30%;
+  text-align: center;
+}
+
+.habitat-list img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reviews Section */
+#review {
+  text-align: center;
+  font-style: italic;
+}
+
+#reviews p {
+  margin-bottom: 10px;
+}
+
+
+/* Footer */
+#footer {
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .images-container,
+  .service-list,
+  .habitat-list {
+    transform: scale(1.1); /* Zoom effect */
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images-container img,
+  .service-list li,
+  .habitat-list li {
+    width: 80%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}

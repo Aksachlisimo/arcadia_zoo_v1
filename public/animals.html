@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  
+  <title>Nos Animaux - Arcadia Zoo</title>
+  <link rel="stylesheet" href="../CSS/animals.css"> <!-- Link to your existing CSS file -->
+</head>
+<body>
+  <header>
+    <nav id="nav">
+      <!-- Navigation links -->
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Nos Services</a></li>
+        <li><a href="habitats.html">Nos Habitats</a></li>
+        <li><a href="animals.html" class="active">Nos Animaux</a></li>
+        <li><a href="reviews.html">Avis des visiteurs</a></li>
+        <li><a href="login.html">Connexion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Nos Animaux</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Découvrez Nos Animaux</h2>
+      <div id="animals-list">
+        <div class="animal-item">
+          <img src="../images/lion.jpg" alt="Lion">
+          <h3>Lion</h3>
+          <p>Le lion est connu comme le roi de la savane. Il vit en groupe appelé fierté et est un prédateur apex.</p>
+        </div>
+        <div class="animal-item">
+          <img src="../images/elephant.jpg" alt="Éléphant">
+          <h3>Éléphant</h3>
+          <p>L'éléphant est le plus grand des animaux terrestres. Il est connu pour sa trompe et sa mémoire exceptionnelle.</p>
+        </div>
+        <div class="animal-item">
+          <img src="../images/Tigre.jpg" alt="Tigre">
+          <h3>Tigre</h3>
+          <p>Le tigre est un grand félin caractérisé par ses rayures noires et orange. Il est un prédateur solitaire.</p>
+        </div>
+        <!-- Add more animal items as needed -->
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+  </footer>
+  <script src="../JS/menu.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animalItems = document.querySelectorAll('.animal-item');
+    
+      animalItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const animalId = item.dataset.id; // Assuming you have animal IDs
+    
+          fetch(`/increment-view/${animalId}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Animal view incremented:', data);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        });
+      });
+    });
+    </script>
+    
+
+</body>
+</html>

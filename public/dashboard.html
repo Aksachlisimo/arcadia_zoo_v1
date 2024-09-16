@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../CSS/dashboard.css"> <!-- Link to your existing CSS file -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library for charts -->
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./public/index.html">Accueil</a></li>
+        <li><a href="./public/admin.html">Espace Administrateur</a></li>
+        <li><a href="./public/employee.html">Espace Employé</a></li>
+        <li><a href="./public/veterinarian.html">Espace Vétérinaire</a></li>
+      </ul>
+    </nav>
+    <h1>Dashboard</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Nombre de consultations par animal</h2>
+      <canvas id="consultations-chart" width="400" height="200"></canvas>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
+  </footer>
+  
+  <script>
+    const ctx = document.getElementById('consultations-chart').getContext('2d');
+    const consultationsChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Animal1', 'Animal2', 'Animal3'], // Replace with dynamic labels
+        datasets: [{
+          label: 'Nombre de consultations',
+          data: [12, 19, 3], // Replace with dynamic data
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
