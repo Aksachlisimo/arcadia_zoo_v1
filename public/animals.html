@@ -62,7 +62,7 @@
         item.addEventListener('click', () => {
           const animalId = item.dataset.id; // Assuming you have animal IDs
     
-          fetch(`/increment-view/${animalId}`, {
+          fetch(`https://arcadia-zoo-v1-api.onrender.com/increment-view/${animalId}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

@@ -61,22 +61,21 @@ router.delete('/animals/:id', async (req, res) => {
 
 // Endpoint to increment view count
 app.post('/increment-view/:id', async (req, res) => {
+  const { id } = req.params;
   try {
-    const animalId = req.params.id;
-    const animal = await Animal.findById(animalId);
-
-    if (!animal) {
-      return res.status(404).send('Animal not found');
+    const animal = await Animal.findById(id);
+    if (animal) {
+      animal.views += 1;
+      await animal.save();
+      res.status(200).json(animal);
+    } else {
+      res.status(404).json({ message: 'Animal not found' });
     }
-
-    animal.views += 1; // Increment the view count
-    await animal.save();
-
-    res.send(animal);
-  } catch (error) {
-    res.status(500).send('Server error');
+  } catch (err) {
+    res.status(500).json({ message: 'Server error', error: err });
   }
 });
+
 module.exports = router;
 
 // Serve static HTML files
