@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const pool = require('./models/db'); // PostgreSQL pool setup
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const mongoose = require('mongoose');
 const Animal = require('./models/animal');
 const router = express.Router();
@@ -181,7 +181,7 @@ app.post('/api/login', async (req, res) => {
     const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
     if (result.rows.length > 0) {
       const user = result.rows[0];
-      const match = await bcrypt.compare(password, user.password);
+      const match = await bcryptjs.compare(password, user.password);
       if (match) {
         // Authentication successful
         res.status(200).json({
