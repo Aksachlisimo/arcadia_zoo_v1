@@ -7,6 +7,7 @@ const pool = new Pool({
   database: 'arcadia_zoo_db',
   password: 'aksachli',
   port: 5432,
+  connectionString: process.env.DATABASE_URL
 });
 
 pool.on('connect', () => {
