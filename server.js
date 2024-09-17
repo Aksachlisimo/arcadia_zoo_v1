@@ -6,11 +6,6 @@ const bcryptjs = require('bcryptjs');
 const mongoose = require('mongoose');
 const Animal = require('./models/animal');
 const router = express.Router();
-
-
-
-
-
 const app = express();
 const port = 5000;
 
