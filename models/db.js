@@ -2,13 +2,12 @@ const { Pool } = require('pg');
 const bcryptjs = require('bcryptjs');
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'arcadia_zoo_db',
-  password: 'aksachli',
-  port: 5432,
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
+
 
 pool.on('connect', () => {
   console.log('PostgreSQL connected');
