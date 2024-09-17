@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (pseudo && review) {
             try {
-                const response = await fetch('http://localhost:5000/api/reviews', {
+                const response = await fetch('https://arcadia-zoo-v1-api.onrender.com/api/reviews', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

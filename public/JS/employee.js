@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadReviews() {
     try {
-        const response = await fetch('http://localhost:5000/api/reviews'); // Replace with your API endpoint
+        const response = await fetch('https://arcadia-zoo-v1-api.onrender.com//reviews'); // Replace with your API endpoint
         const reviews = await response.json();
         const tableBody = document.querySelector('#reviews-table tbody');
         

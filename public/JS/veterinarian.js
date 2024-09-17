@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const reportText = document.getElementById('report-text').value;
   
       try {
-        const response = await fetch('http://localhost:5000/api/vet-reports', {
+        const response = await fetch('https://arcadia-zoo-v1-api.onrender.com/api/vet-reports', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   
     if (title && description && email) {
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch('https://arcadia-zoo-v1-api.onrender.com/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
