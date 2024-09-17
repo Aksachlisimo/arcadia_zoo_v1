@@ -1,13 +1,24 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const pool = require('./models/db'); // PostgreSQL pool setup
 const bcryptjs = require('bcryptjs');
-const mongoose = require('mongoose');
 const Animal = require('./models/animal');
 const router = express.Router();
 const app = express();
 const port = 5000;
+const mongoose = require('mongoose');
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));
+
+// Initialize PostgreSQL pool
+const pool = require('./models/db'); // PostgreSQL pool setup
+
 
 // Enable CORS (Cross-Origin Resource Sharing)
 app.use(cors({
