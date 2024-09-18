@@ -2,19 +2,19 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const bcryptjs = require('bcryptjs');
-const Animal = require('./models/animal');
+// const Animal = require('./models/animal');
 const router = express.Router();
 const app = express();
 
 // Connect to MongoDB
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://aksachli:Aksachli2024@aksachli.vkwrx.mongodb.net/', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch((err) => console.error('MongoDB connection error:', err));
+// mongoose.connect('mongodb+srv://aksachli:Aksachli2024@aksachli.vkwrx.mongodb.net/', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+// .then(() => console.log('Connected to MongoDB'))
+// .catch((err) => console.error('MongoDB connection error:', err));
 
 
 // Initialize PostgreSQL pool
@@ -266,7 +266,6 @@ app.post('/api/feeding-records', async (req, res) => {
 
 
 // Start the server
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.listen(5000, () => {
+  console.log('Server is running on port 5000');
 });
