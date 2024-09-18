@@ -5,7 +5,6 @@ const bcryptjs = require('bcryptjs');
 const Animal = require('./models/animal');
 const router = express.Router();
 const app = express();
-const port = 5000;
 
 // Connect to MongoDB
 const mongoose = require('mongoose');
@@ -267,6 +266,7 @@ app.post('/api/feeding-records', async (req, res) => {
 
 
 // Start the server
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });

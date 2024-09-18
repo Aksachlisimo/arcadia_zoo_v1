@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (serviceName && serviceDescription) {
       try {
-        const response = await fetch('https://arcadia-zoo-v1-api.onrender.com/api/services', {
+        const response = await fetch('https://arcadiazooapi.vercel.app/api/services', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
