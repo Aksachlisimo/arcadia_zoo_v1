@@ -24,7 +24,7 @@ const pool = require('./models/db'); // PostgreSQL pool setup
 
 // Enable CORS (Cross-Origin Resource Sharing)
 app.use(cors({
-  origin: 'https://arcadiazoo1.netlify.app', // Your frontend URL
+  origin: 'https://arcadiazoo1.netlify.app/', // Your frontend URL
 }));
 
 // Body parser for JSON
