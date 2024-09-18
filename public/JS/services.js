@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const response = await fetch('https://arcadiazooapi.vercel.app/api/services', {
           method: 'POST',
+          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json'
           },
