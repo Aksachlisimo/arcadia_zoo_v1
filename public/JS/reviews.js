@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (pseudo && review) {
             try {
-                const response = await fetch('https://arcadiazooapi.vercel.app/api/reviews', {
+                const response = await fetch('https://arcadia-zoo-api.onrender.com/api/reviews', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
