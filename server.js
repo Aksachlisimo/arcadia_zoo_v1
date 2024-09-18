@@ -10,7 +10,7 @@ const port = 5000;
 // Connect to MongoDB
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://aksachli:Aksachli2024@aksachli.vkwrx.mongodb.net/arcadia_zoo_db?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://aksachli:Aksachli2024@aksachli.vkwrx.mongodb.net/', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
