@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const reportText = document.getElementById('report-text').value;
   
       try {
-        const response = await fetch('https://arcadia-zoo-v1-api.onrender.com/api/vet-reports', {
+        const response = await fetch('https://arcadia-zoo-api.onrender.com/api/vet-reports', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const commentText = document.getElementById('comment-text').value;
   
       try {
-        const response = await fetch('http://localhost:5000/api/habitat-comments', {
+        const response = await fetch('https://arcadia-zoo-api.onrender.com/api/habitat-comments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const foodQuantity = document.getElementById('food-quantity').value;
   
       try {
-        const response = await fetch('http://localhost:5000/api/feeding-records', {
+        const response = await fetch('https://arcadia-zoo-api.onrender.com/api/feeding-records', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

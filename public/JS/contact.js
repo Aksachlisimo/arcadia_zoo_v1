@@ -7,7 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   
     if (title && description && email) {
         try {
-            const response = await fetch('https://arcadia-zoo-api.onrender.com/contact', {
+            const response = await fetch('https://arcadia-zoo-api.onrender.com/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
