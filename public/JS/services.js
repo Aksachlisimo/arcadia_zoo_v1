@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const formData = new FormData(form);
     const data = {
-      name: formData.get('name'),
-      description: formData.get('description')
+      id: formData.get('service-id'),
+      name: formData.get('service-name'),
+      description: formData.get('service-description')
     };
+    
     
     try {
       const response = await fetch('https://arcadia-zoo-api.onrender.com/api/services', {
