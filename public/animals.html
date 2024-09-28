@@ -29,17 +29,17 @@
     <section>
       <h2>Découvrez Nos Animaux</h2>
       <div id="animals-list">
-        <div class="animal-item">
+        <div class="animal-item" data-id="1" >
           <img src="./images/lion.jpg" alt="Lion">
           <h3>Lion</h3>
           <p>Le lion est connu comme le roi de la savane. Il vit en groupe appelé fierté et est un prédateur apex.</p>
         </div>
-        <div class="animal-item">
+        <div class="animal-item" data-id="2">
           <img src="./images/elephant.jpg" alt="Éléphant">
           <h3>Éléphant</h3>
           <p>L'éléphant est le plus grand des animaux terrestres. Il est connu pour sa trompe et sa mémoire exceptionnelle.</p>
         </div>
-        <div class="animal-item">
+        <div class="animal-item" data-id="3">
           <img src="./images/Tigre.jpg" alt="Tigre">
           <h3>Tigre</h3>
           <p>Le tigre est un grand félin caractérisé par ses rayures noires et orange. Il est un prédateur solitaire.</p>
@@ -55,29 +55,30 @@
   <script src="./JS/menu.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const animalItems = document.querySelectorAll('.animal-item');
-    
-      animalItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const animalId = item.dataset.id; // Assuming you have animal IDs
-    
-          fetch(`https://arcadia-zoo-v1-api.onrender.com/increment-view/${animalId}`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          })
-          .then(response => response.json())
-          .then(data => {
-            console.log('Animal view incremented:', data);
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-        });
+ document.addEventListener('DOMContentLoaded', () => {
+  const animalItems = document.querySelectorAll('.animal-item');
+
+  animalItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const animalId = item.dataset.id; // Now this should correctly get the ID
+
+      fetch(`https://arcadia-zoo-v1-api.onrender.com/increment-view/${animalId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Animal view incremented:', data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
       });
     });
+  });
+});
+
     </script>
     
 
