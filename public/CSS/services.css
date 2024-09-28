@@ -95,7 +95,7 @@ h2 {
 }
 
 /* Form Styling */
-#service-modification-form {
+#service-form {
   background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
@@ -104,14 +104,14 @@ h2 {
   margin: 0 auto;
 }
 
-#service-modification-form label {
+#service-form label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-#service-modification-form input[type="text"],
-#service-modification-form textarea {
+#service-form input[type="text"],
+#service-form textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -119,7 +119,7 @@ h2 {
   border-radius: 4px;
 }
 
-#service-modification-form input[type="submit"] {
+#service-form input[type="submit"] {
   background-color: #4caf50; /* Green button */
   color: #fff;
   border: none;
@@ -130,7 +130,7 @@ h2 {
   transition: background-color 0.3s;
 }
 
-#service-modification-form input[type="submit"]:hover {
+#service-form input[type="submit"]:hover {
   background-color: #388e3c; /* Darker green on hover */
 }
 
@@ -156,7 +156,7 @@ footer {
     text-align: center;
   }
 
-  #service-modification-form {
+  #service-form {
     padding: 1rem;
   }
 }
