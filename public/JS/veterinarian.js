@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle form submission for reports
     document.getElementById('report-form').addEventListener('submit', async function (event) {
       event.preventDefault(); // Prevent default form submission
-      
       const animalId = document.getElementById('animal-id').value;
       const reportDate = document.getElementById('report-date').value;
       const reportText = document.getElementById('report-text').value;

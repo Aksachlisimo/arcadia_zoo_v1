@@ -67,10 +67,10 @@ function handleServiceFormSubmit() {
                 },
                 body: JSON.stringify({ name: serviceName, description: serviceDescription }),
             });
-            alert('Service updated');
+            alert('Service mis à jour');
             form.reset();
         } catch (error) {
-            console.error('Error updating service:', error);
+            console.error('Erreur lors de la mise à jour du service:', error);
         }
     });
 }
