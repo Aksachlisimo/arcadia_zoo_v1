@@ -3,39 +3,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f7f6;
 }
 
 header {
-    background-color: #333;
+    background-color: rgb(58, 146, 105);
     color: #fff;
     padding: 10px 0;
 }
 
+/* Navigation Styles */
 nav {
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+    background-color: #4caf50; /* Eco green for nav bar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    list-style: none;
+  }
+  
+  
+  nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a.active {
+    padding: 10px 20px;
+    border-radius: 5px;
     font-weight: bold;
-}
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.1);
+  }
+  
 
 h1 {
     text-align: center;
