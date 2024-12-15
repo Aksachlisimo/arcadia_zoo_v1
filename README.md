@@ -92,30 +92,13 @@ RUN npm install
 
 CMD ["npm", "start"]
 
-####docker-compose.yml:
+#### docker-compose.yml:
+
+![yaml_file](./Screenshots/yaml.jpg)
 
 To run both services together, here is the docker-compose.yml file :
 
-version: '3'
 
-services:
-  frontend:
-    build: ./arcadia_zoo_v1
-    ports:
-      - "3000:3000"
-    networks:
-      - app-network
-
-  backend:
-    build: ./Arcadia_zoo_Api
-    ports:
-      - "5000:5000"
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
 
 
 
@@ -130,5 +113,6 @@ networks:
 5. Create a pull request.
 
 
-###License
-This project is licensed under the MIT License.
+
+## Contact :
+Have questions or suggestions? Feel free to reach out to us at mohamedmouhimine@gmail.com
