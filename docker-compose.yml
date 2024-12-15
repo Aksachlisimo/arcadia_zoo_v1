@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./arcadia_zoo_v1
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  backend:
+    build: ./Arcadia_zoo_Api
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
