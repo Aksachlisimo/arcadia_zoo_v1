@@ -139,6 +139,9 @@ To run both services together, here is the docker-compose.yml file :
 ```
 7. Create a pull request.
 
+## Contact :
+ Have questions or suggestions? Feel free to reach out to us at mohamedmouhimine@gmail.com
+
 
 
 ## Contact :
