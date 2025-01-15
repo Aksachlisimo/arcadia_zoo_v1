@@ -74,5 +74,35 @@
   <footer>
     <p>&copy; 2024 Arcadia Zoo. Tous droits réservés.</p>
   </footer>
+
+  <script>document.getElementById('account-creation-form').addEventListener('submit', async (event) => {
+    event.preventDefault();  // Prevent form submission
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const role = document.getElementById('role').value;
+
+    const userData = { email, password, role };
+
+    try {
+        const response = await fetch('https://arcadia-zoo-api.onrender.com/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(userData),
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            alert('User created successfully');
+            document.getElementById('account-creation-form').reset();
+        } else {
+            alert(`Error: ${result.message}`);
+        }
+    } catch (error) {
+        console.error('Error creating user:', error);
+        alert('Error creating user. Please try again.');
+    }
+});
+</script>
 </body>
 </html>

@@ -1,20 +1,39 @@
-version: '3'
-
+version: "3.8"
 services:
-  frontend:
-    build: ./arcadia_zoo_v1
-    ports:
-      - "3000:3000"
-    networks:
-      - app-network
-
   backend:
-    build: ./Arcadia_zoo_Api
+    build: .
     ports:
       - "5000:5000"
-    networks:
-      - app-network
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+      - mongodb
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "start"]  # Ensure the backend starts properly
+  
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: arcadia_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Persist PostgreSQL data
+  
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodbdata:/data/db  # Persist MongoDB data
 
-networks:
-  app-network:
-    driver: bridge
+volumes:
+  pgdata:
+  mongodbdata:
